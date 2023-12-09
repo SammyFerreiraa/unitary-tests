@@ -1,14 +1,15 @@
 import Link from 'next/link'
 import Button from './components/button/Button'
+import GreatingContainer from './components/greeting-container/GreatingContainer'
 
 export default function Home() {
   return (
     <main>
-      <h2>Templates</h2>
+      <h1>Templates</h1>
       <Button>Button</Button>
       <div>
-        <h1>Links</h1>
         <Link href="/about">About Page</Link>
+        <GreatingContainer />
       </div>
     </main>
   )
