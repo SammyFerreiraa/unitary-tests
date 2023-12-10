@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <h1>Templates</h1>
-      <Button>Button</Button>
+      <Button disable={false}>Button</Button>
       <div>
         <Link href="/about">About Page</Link>
         <GreatingContainer />
