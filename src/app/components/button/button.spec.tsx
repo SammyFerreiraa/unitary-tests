@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, getByText, render, screen } from '@testing-library/react'
 import Button from '../button/Button'
 
 describe('button', () => {
@@ -14,10 +14,21 @@ describe('button', () => {
     const button = getByText('Click Me')
     expect(button).toHaveClass('bg-red-500')
   })
-  it('should render with green background if false', () => {
+  it('should render with green background if active', () => {
     const { getByText } = render(<Button disable={false}>Click Me</Button>)
 
     const button = getByText('Click Me')
     expect(button).toHaveClass('bg-green-500')
+  })
+  it('should call onClick prop onclick', () => {
+    const onClick = jest.fn()
+
+    render(<Button onclick={onClick}>Click Me</Button>)
+
+    const button = screen.getByText('Click Me')
+
+    fireEvent.click(button)
+
+    expect(onClick).toHaveBeenCalledTimes(1)
   })
 })
