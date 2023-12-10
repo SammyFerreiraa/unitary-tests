@@ -1,10 +1,9 @@
+import { Button, GreatingContainer } from '@/components'
 import Link from 'next/link'
-import Button from './components/button/Button'
-import GreatingContainer from './components/greeting-container/GreatingContainer'
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex min-h-screen flex-col items-center gap-2">
       <h1>Templates</h1>
       <Button disable={false}>Button</Button>
       <div>
