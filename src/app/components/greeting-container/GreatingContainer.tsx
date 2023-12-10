@@ -20,7 +20,9 @@ const GreatingContainer = () => {
   return (
     <div>
       <Greating text={TextSeen} />
-      <Button onclick={changeText}>Change Text</Button>
+      <Button onclick={changeText} disable={false}>
+        Change Text
+      </Button>
     </div>
   )
 }
